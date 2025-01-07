@@ -1,132 +1,62 @@
-# OpenWRT QEMU Launcher
 
-![OpenWRT](https://openwrt.org/_media/logo.png)
+# 🗂️ Scripts Guarita - Main Repository
 
-[🇧🇷 Versão em Português](#português) | [🇬🇧 English Version](#english)
+Welcome to the repository that contains various scripts and tools for task automation, including network management scripts and OpenWRT initialization in a virtualized environment.
 
-<a name="english"></a>
-## 🇬🇧 English
+## 📑 Available Documents
 
-### 📝 Description
-Bash script to automate OpenWRT initialization in QEMU. This script simplifies the process of running OpenWRT in a virtualized environment, including dependency checks and necessary configurations.
+This repository contains the following guides:
 
-### ⭐ Features
-- ✅ Automatic QEMU verification and installation
-- 🖥️ Support for multiple operating systems (Arch Linux, Debian/Ubuntu, Alpine Linux, macOS)
-- 🔒 Security and permission checks
-- 🌐 Automatically configured virtual network interface
-- 📋 Clear post-boot configuration instructions
+- [🌐 Network Management Scripts](/docs/SCRIPTS.md)
+  - Network access management, blocking social networks, blocking adult content, and resetting firewall rules using `nftables`.
+  
+- [💻 OpenWRT QEMU Launcher](/docs/QEMU.md)
+  - Script to automate OpenWRT initialization in QEMU, with support for different operating systems.
 
-### 📋 Prerequisites
-- Linux or macOS operating system
-- Administrator (root) privileges
-- x86_64 compatible OpenWRT image
+## 🚀 How to Use
 
-### 📥 Getting the OpenWRT Image
-1. Visit [OpenWRT 23.05.1 x86/64](https://archive.openwrt.org/releases/23.05.1/targets/x86/64/)
-2. Download the file `openwrt-23.05.1-x86-64-generic-ext4-combined.img.gz`
-3. Extract the file:
-```bash
-gunzip openwrt-23.05.1-x86-64-generic-ext4-combined.img.gz
-```
+To get started, simply access the corresponding document for what you want to configure and follow the installation and usage instructions.
 
-### 🚀 Installation
-1. Clone this repository:
+### 📥 How to Clone the Repository
+
+Clone this repository to your local machine:
+
 ```bash
 git clone git@github.com:is4bel4/scripts_guarita.git
 ```
-2. Make the script executable:
-```bash
-cd scripts_guarita
-chmod +x start_openwrt.sh
-```
 
-### 💻 Usage
-Run the script as root, specifying the OpenWRT image path:
-```bash
-sudo ./start_openwrt.sh [IMAGE_PATH]
-```
-or simply:
-```bash
-sudo ./start_openwrt.sh
-```
-and input the image path when prompted.
-
-### ⚙️ Post-boot Instructions
-1. To configure the default route (if needed):
-```bash
-ip route add default via 10.0.2.2 dev eth1
-```
-2. Test connectivity:
-```bash
-ping 8.8.8.8
-```
-
-### ❌ To Exit
-Press `Ctrl+A`, followed by `X`
+Once cloned, navigate to the `scripts_guarita` and `openwrt_qemu` directories to find their respective `README.md` files and scripts.
 
 ---
 
 <a name="português"></a>
 ## 🇧🇷 Português
 
-### 📝 Descrição
-Script em bash para automatizar a inicialização do OpenWRT no QEMU. Este script simplifica o processo de execução do OpenWRT em um ambiente virtualizado, incluindo verificações de dependências e configurações necessárias.
+Bem-vindo ao repositório que contém diversos scripts e ferramentas para automação de tarefas, incluindo scripts para gerenciamento de rede e inicialização do OpenWRT em um ambiente virtualizado.
 
-### ⭐ Características
-- ✅ Verificação automática e instalação do QEMU
-- 🖥️ Suporte a múltiplos sistemas operacionais (Arch Linux, Debian/Ubuntu, Alpine Linux, macOS)
-- 🔒 Verificações de segurança e permissões
-- 🌐 Interface de rede virtualizada configurada automaticamente
-- 📋 Instruções claras para configuração pós-inicialização
+## 📑 Documentos Disponíveis
 
-### 📋 Pré-requisitos
-- Sistema operacional Linux ou macOS
-- Privilégios de administrador (root)
-- Imagem do OpenWRT compatível com x86_64
+Este repositório contém os seguintes guias:
 
-### 📥 Obtendo a Imagem do OpenWRT
-1. Acesse [OpenWRT 23.05.1 x86/64](https://archive.openwrt.org/releases/23.05.1/targets/x86/64/)
-2. Baixe o arquivo `openwrt-23.05.1-x86-64-generic-ext4-combined.img.gz`
-3. Extraia o arquivo:
-```bash
-gunzip openwrt-23.05.1-x86-64-generic-ext4-combined.img.gz
-```
+- [🌐 Scripts de Gerenciamento de Rede](/docs/SCRIPTS.md)
+  - Gerenciamento de acessos à internet, bloqueio de redes sociais, bloqueio de conteúdo adulto e redefinição de regras de firewall usando `nftables`.
+  
+- [💻 OpenWRT QEMU Launcher](/docs/QEMU.md)
+  - Script para automatizar a inicialização do OpenWRT no QEMU, com suporte a diferentes sistemas operacionais.
 
-### 🚀 Instalação
-1. Clone este repositório:
+## 🚀 Como Usar
+
+Para começar, basta acessar o documento correspondente ao que deseja configurar e seguir as instruções de instalação e uso.
+
+### 📥 Como Clonar o Repositório
+
+Clone este repositório em sua máquina:
+
 ```bash
 git clone git@github.com:is4bel4/scripts_guarita.git
 ```
-2. Torne o script executável:
-```bash
-cd scripts_guarita
-chmod +x start_openwrt.sh
-```
 
-### 💻 Uso
-Execute o script como root, especificando o caminho da imagem do OpenWRT:
-```bash
-sudo ./start_openwrt.sh [CAMINHO_DA_IMAGEM]
-```
-ou simplesmente:
-```bash
-sudo ./start_openwrt.sh
-```
-e insira o caminho da imagem quando solicitado.
-
-### ⚙️ Instruções pós-inicialização
-1. Para configurar a rota padrão (se necessário):
-```bash
-ip route add default via 10.0.2.2 dev eth1
-```
-2. Teste a conectividade:
-```bash
-ping 8.8.8.8
-```
-
-### ❌ Para sair
-Pressione `Ctrl+A`, seguido de `X`
+Após clonar, acesse os diretórios `scripts_guarita` e `openwrt_qemu` para encontrar os respectivos `README.md` e scripts.
 
 ---
 
